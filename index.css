@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600&display=swap');
+
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: url("src/imagesForIntro/asphalt texture.png");
+  -webkit-user-drag: none;
+  background-repeat: repeat;
+  /* background-attachment: fixed; */
+  overflow-x: hidden;
+}
+
+.errormessage{
+
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 3vw;
+  font-weight: 300;
+  color: #F1F2F3;
+  text-align: center;
+  display: none;
+  width: 100%;
+  z-index: 100;
+}
+.errormessage a{
+  color: rgb(60, 195, 187);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+
+
+div.light{
+  width: 80vh;
+  height: 80vh;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-filter: blur(25vh);
+  opacity: 40%;
+  mix-blend-mode: color-dodge;
+}
+/* light positioning < */
+div.light#l1{
+  top: -20vh;
+  left:-20vh;
+  background-color: rgb(0 224 224);
+}
+div.light#l2{
+  top: 60vh;
+  right:-30vh;
+  background-color: #F2F3F4;
+  opacity: 20%;
+}
+div.light#l3{
+  top: 130vh;
+  left:-40vh;
+  background-color: rgb(224 0 0);
+}
+div.light#l4{
+  right: -30vh;
+  top: 220vh;
+  background-color: rgb(0 224 224);
+}
+div.light#l5{
+  left: -50vh;
+  top: 280vh;
+  background-color: #F2F3F4;
+  opacity: 20%;
+}
+div.light#l6{
+  top: 370vh;
+  right: -15vh;
+  background-color: rgb(224 0 0);
+}
+div.light#l7{
+  left: -30vh;
+  top: 420vh;
+  background-color: rgb(0 224 224);
+  opacity: 30%;
+}
+/* >light positioning  */
+/* squiggles generalization<          ratio width to height 5 to 3*/
+div.squiggles{
+  position: absolute;
+  width: 200px;
+  height: 120px;
+}
+div.squiggles table{
+  height: 100%;
+  width: 100%;
+}
+div.squiggles table, div.squiggles table tr, div.squiggles table td{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+div.squiggles table tr td{
+  width: 20%;
+}
+div.squiggles div.part{
+  height: 171.42%;
+  width: 30%;
+  background-color: green;
+  margin: 0;
+ }
+/* color change above */
+div.squiggles div.part#d{
+  transform: rotate(-45deg);
+}
+div.squiggles div.part#u{
+  transform: rotate(45deg);
+}
+/* >squiggles generalization */
+
+/* button generalization< */
+button.seemore{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 4vh;
+  position: absolute;
+  color: green;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  line-height: 1vh;
+  transition-timing-function: ease-out;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+button.seemore::after{
+  content: "➜";
+  font-size: 5vh;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.5vh green solid;
+  border-radius: 50%;
+  padding: 0.5vh 1.3vh 0.5vh 1.3vh;
+}
+
+
+/* >button generalization */
+
+
+
+
+
+
+
+div.bg{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  /* display: flex;
+  flex-direction: row; */
+  /* overflow: hidden; */
+}
+
+
+
+/* screen 1 */
+div.bg#one{
+  height: 107vh;
+  margin: 0;
+  padding:0;
+}
+div.bg#one img{
+  height: 100vh;
+  margin: 0;
+  padding:0;
+  top:0;
+}
+div.bg#one .subframe{
+  position: absolute;
+  right: 5vw;
+  top: 10vh;
+  height: 60vh;
+  width: 93vh;
+  background-color: rgb(27, 29, 31);
+  filter: drop-shadow(0px 0px 3vh #000000);
+}
+div.bg#one .subframe div{
+  top: 5%;
+  right: 3%;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  border: 1vh solid rgb(244 0 0);
+  box-shadow: 0px 0px 4vh 0px rgb(244, 0, 0), inset 0px 0px 4vh 0px rgb(244, 0, 0);
+}
+div.bg#one .subframe p{
+  color: #F2F3F4;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 12vh;
+  margin-left: 4vh;
+  margin-bottom: 0;
+}
+div.bg#one .subframe p#subtxt{
+  font-size: 2.5vh;
+  font-weight: 200;
+  margin-top: 2em;
+  color: #DADEDF;
+}
+
+div.separator{
+  position: relative;
+  width: 170vh;
+  height: 7vh;
+  top: -5px;
+}
+div.separator div.l{
+  height: 1vh;
+  margin-bottom: 2.5vh;
+  background: rgb(40, 45, 46);
+}
+div.separator div.l.one{
+  width: 100%;
+}
+div.separator div.l.two{
+  width: 70%;
+}
+div.separator div.l.three{
+    width: 40%;
+    margin-bottom: 0;
+}
+
+
+
+/* screen two */
+div.bg#two div.left{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  max-width: 45vw;
+}
+div.bg#two div.left div.shape{
+  height: 60vh;
+  width: 60vh;
+  position: relative;
+  background-color: #131516;
+  box-shadow: inset 0px 0px 20vh 2vh #373D3F;
+  top: 22vh;
+  right: 0;
+  border-radius: 22% 78% 63% 37% / 31% 58% 42% 69%;
+  margin-left: 5vw;
+}
+div.bg#two div.left div.shape p{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  color: #F1F2F3;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10vh;
+  font-weight: 400;
+  position: relative;
+  line-height: 1em;
+  top: 10vh;
+  left: 10vh;
+}
+div.bg#two div.left div.shape p::before{
+  display: flex;
+  position: relative;
+  content: " ";
+  height: 2.1em;
+  width: 0.08em;
+  background-color: #F1F2F3;
+  right: 0.3ch;
+}
+div.bg#two div.left div.shape button{
+  transform: scale(0.8);
+  color: rgb(0, 244, 244);
+  bottom: 22vh;
+  right: 2vh;
+}
+/* div.bg#two div.left div.shape button:hover{
+  transform: translate(1vh, 0);
+} */
+div.bg#two div.left div.shape button::after{
+  border-color: rgb(0, 244, 244);
+}
+div.bg#two div.left div.shape div.squiggles{
+  position: absolute;
+  bottom: 5vh;
+  left: -5vh;
+  height: 18vh;
+  width: 30vh;
+}
+div.bg#two div.left div.shape div.squiggles div.part{
+  background-color: rgb(60, 195, 187);
+}
+div.bg#two div.left div.square{
+  position: absolute;
+  right: -5vh;
+  top: 15vh;
+  height: 40vh;
+  width: 40vh;
+  border: 0.7vh rgb(244, 0, 0) solid;
+  box-shadow: 0px 0px 4vh 0px rgb(244, 0, 0), inset 0px 0px 4vh 0px rgb(244, 0, 0);
+}
+
+div.bg#two div.right{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  max-width: 55vw;
+}
+div.bg#two img{
+  position: relative;
+  top: 2.5vh;
+  height: 95vh;
+  left: 3vw;
+}
+div.bg#two div.right div.squiggles{
+  top: 18vh;
+  left: 75vh;
+  height: 15vh;
+  width: 25vh;
+}
+div.bg#two div.right div.squiggles div.part{
+  background-color: rgb(244, 0, 0);
+}
+div.bg#two div.right div.circlelight{
+  position: absolute;
+  height: 90vh;
+  width: 90vh;
+  top: 5vh;
+  left:  0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5vh 2vh #F2F3F4;
+}
+
+
+
+/* screen three */
+div.bg#three div.left{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  max-width: 55vw;
+}
+div.bg#three div.left div.line{
+  width: 1vh;
+  height: 110%;
+  right: 30%;
+  top: -8vh;
+  position: absolute;
+  background-color: #F2F3F4;
+  box-shadow: 0px 0px 5vh 2vh #F2F3F4;
+  transform: rotate(-40deg);
+}
+div.bg#three div.left div.shape{
+  position: relative;
+  height: 70vh;
+  width: 80vh;
+  border-radius: 54% 46% 81% 19% / 68% 25% 75% 32%;
+  top: 12vh;
+  background-color: rgb(164, 0, 30);
+  left: 8vw;
+  box-shadow: inset 0px 0px 30vh 3vh rgb(244, 0, 0), 0px 0px 3vh rgb(0, 0, 0);
+
+}
+div.bg#three div.left img.lip{
+  height: 45vh;
+  position: absolute;
+  right: -5vh;
+  bottom: 0vh;
+  transform: rotate(15deg);
+}
+div.bg#three div.left img.eye{
+  height: 55vh;
+  position: absolute;
+  top: -10vh;
+  left: -10vh;
+  transform: rotate(-15deg);
+}
+div.bg#three div.left div.shape div.square{
+  height: 40vh;
+  width: 40vh;
+  border: 0.9vh rgb(0, 244, 244) solid;
+  /* box-shadow: inset 0px 0px 6vh 0vh rgb(0, 244, 244), 0px 0px 2vh 0 rgb(0, 244, 244); */
+  box-shadow: 0px 0px 5vh 0px rgb(0, 244, 244), inset 0px 0px 5vh 0px rgb(0, 244, 244);
+  left: -8vh;
+  bottom: -4vh;
+  position: absolute;
+}
+div.bg#three div.left div.shape div.squiggles{
+  height: 27vh;
+  width: 45vh;
+  right: 2vh;
+  top: 8vh;
+}
+div.bg#three div.left div.shape div.squiggles div.part{
+  background-color: #131516;
+}
+
+div.bg#three div.right{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  max-width: 55vw;
+  right: 0;
+}
+div.bg#three div.right div.shape{
+  height: 60vh;
+  width: 60vh;
+  position: relative;
+  background-color: #131516;
+  box-shadow: inset 0px 0px 20vh 2vh #373D3F;
+  top: 20vh;
+  left: 0;
+  border-radius: 65% 35% 32% 68% / 39% 38% 62% 61% ;
+  margin-right: 8vw;
+  text-align: left;
+}
+div.bg#three div.right div.shape p{
+  text-align: right;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  color: #F1F2F3;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 8vh;
+  font-weight: 400;
+  position: relative;
+  line-height: 1em;
+  top: 10vh;
+  left: 10vh;
+}
+div.bg#three div.right div.shape p::after{
+  display: flex;
+  position: relative;
+  content: " ";
+  height: 3.1em;
+  width: 0.09em;
+  background-color: #F1F2F3;
+  left: 0.3ch;
+}
+div.bg#three div.right div.shape button{
+  color: rgb(255, 0, 0);
+  transform: scale(0.8);
+  font-weight: 600;
+  right: 3vh;
+  bottom: 18vh;
+}
+div.bg#three div.right div.shape button::after{
+  border-color: rgb(255, 0, 0);
+  border-width: 0.6vh;
+}
+div.bg#three div.right div.shape div.circle{
+  height: 55vh;
+  width: 55vh;
+  position: absolute;
+  bottom: -6vh;
+  left: -6vh;
+  border-radius: 65% 35% 32% 68% / 39% 38% 62% 61% ;
+  border: rgb(0, 244, 244) 1vh solid;
+  z-index: -1;
+}
+
+
+
+/* screen four */
+div.bg#four div.left{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  max-width: 45vw;
+}
+div.bg#four div.left div.shape{
+  height: 60vh;
+  width: 60vh;
+  position: relative;
+  background-color: #131516;
+  box-shadow: inset 0px 0px 20vh 2vh #373D3F;
+  top: 18vh;
+  right: 0;
+  border-radius: 34% 66% 48% 52% / 31% 50% 50% 69% ;
+  margin-left: 6vw;
+}
+div.bg#four div.left div.shape p{
+  padding: 0;
+  margin: 0;
+  color: #F1F2F3;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 8vh;
+  font-weight: 400;
+  position: relative;
+  line-height: 1em;
+  top: 9vh;
+  left: 11vh;
+  display: flex;
+}
+div.bg#four div.left div.shape p.arttitle::before{
+  display: flex;
+  position: relative;
+  content: " ";
+  height: 3.1em;
+  width: 0.08em;
+  background-color: #F1F2F3;
+  right: 0.3ch;
+}
+div.bg#four div.left div.shape button{
+  transform: scale(0.8);
+  color: rgb(0, 244, 244);
+  bottom: 18vh;
+  right: 6vh;
+}
+div.bg#four div.left div.shape button::after{
+  border-color: rgb(0, 244, 244);
+}
+div.bg#four div.left div.shape div.squiggles{
+  position: absolute;
+  top: 0vh;
+  right: -5vh;
+  height: 18vh;
+  width: 30vh;
+}
+div.bg#four div.left div.shape div.squiggles div.part{
+  background-color: rgb(244, 0, 0);
+}
+div.bg#four div.left div.circle{
+  position: absolute;
+  left: 2vh;
+  bottom: 15vh;
+  height: 50vh;
+  width: 50vh;
+  border: 0.7vh #F2F3F4 solid;
+  box-shadow: 0px 0px 4vh 0px #F2F3F4, inset 0px 0px 4vh 0px #F2F3F4;
+  border-radius: 50%;
+}
+
+div.bg#four div.right{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  max-width: 55vw;
+
+}
+div.bg#four div.right div.wrapper {
+  max-width: 60vh;
+  max-height: 100%;
+  position: absolute;
+  right: 0;
+  margin-right: 17vw;
+}
+div.bg#four div.right div.wrapper div.rectangle{
+  width: 85vh;
+  height: 40vh;
+  position: absolute;
+  border: 1vh solid rgb(244 0 0);
+  box-shadow: 0px 0px 4vh 0px rgb(244, 0, 0), inset 0px 0px 4vh 0px rgb(244, 0, 0);
+  margin: auto;
+  top: 30vh;
+  left: -15%;
+}
+div.bg#four div.right div.wrapper img.pic{
+  position: relative;
+  top: 5vh;
+  left: 0;
+  height: 90vh;
+  width: auto;
+  transform: rotate(-6deg);
+}
+div.bg#four div.right div.wrapper div.squiggles{
+  position: absolute;
+  bottom: 23vh;
+  right: -12vh;
+  height: 15vh;
+  width: 25vh;
+}
+div.bg#four div.right div.wrapper div.squiggles div.part{
+  background-color: rgb(60, 195, 187);
+}
+div.bg#four div.right div.wrapper img.pen{
+  position: absolute;
+  top: 20vh;
+  right: -29vh;
+  height: 55vh;
+  transform: rotate(-115deg);
+}
+
+
+
+.separator#otherside{
+  width: 50vw;
+  margin-left: 50vw;
+
+}
+.separator#otherside .l{
+  margin-right: 0;
+  margin-left: auto;
+}
+p.header{
+  color: #F1F2F3;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  font-weight: 400;
+  margin: 2%;
+  margin-top: 7%;
+  text-align: center;
+  line-height: 1.6em;
+}
+p.header::after{
+  content: " ";
+  display: block;
+  bottom: -0.4em;
+  height: 0.05em;
+  width: 20ch;
+  margin: auto;
+  background-color: #F2F3F4;
+}
+/* screen five */
+div.bg#five{
+  height: 50vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+div.bg#five div.container{
+  width: 25%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+}
+div.bg#five i#b{
+  color: rgb(60, 195, 187);
+}
+div.bg#five i#r{
+  color: rgb(240, 0, 0);
+}
+div.bg#five i{
+  font-size: 8vw;
+  margin-bottom: 4vh;
+}
+div.bg#five .container{
+  padding: 3%;
+}
+div.bg#five .container p{
+  font-size: 3vh;
+  color: #F2F3F4;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  color: #DADEDF;
+  text-align: center;
+  height: 100%;
+  margin: auto;
+  line-height: auto;
+}
+
+
+/* костыль */
+
+.bg#two .left, .bg#three .right, .bg#four .left{
+  margin: auto;
+}
+.bg#two .left{
+  transform: translateX(2vh) scale(0.83);
+}
+ .bg#four .left{
+   transform: translateX(4vh) scale(0.84);
+ }
+.bg#three .right{
+  transform: translateX(-2vh) scale(0.85);
+}
+.bg#two .right {
+  transform: translateX(-2vh);
+}
+.bg#four .right{
+  transform: translateX(-3vh);
+}
+.bg#three .left{
+  transform: translateX(5vh);
+}
+
+
+
+button.seemore:hover{
+  padding-right: 20px;
+}
+
+
+
+
+
+
+/* screen six*/
+div.bg#theverybottom{
+  max-height: 50vh;
+  background-color: #131516;
+}
+div.bg#theverybottom p{
+  text-align: center;
+  font-size: 2.3vh;
+  font-weight: 300;
+  font-family: 'Roboto Mono', monospace;
+  color: #DADEDF;
+  line-height: 4.5vh;
+  width: 100%;
+  position: absolute;
+  bottom: 19vh;
+}
+ div.bg#theverybottom a{
+  line-height: 4.5vh;
+  font-weight: 300;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.7vh;
+  color: #8C979A;
+  text-decoration: none;
+  position: absolute;
+  bottom: 2vh;
+  width: 100%;
+  text-align: center;
+}
+
+/*adaptation to mobile*/
+@media only screen and (max-aspect-ratio: 1.1/1) {
+ .bg, div.light, .separator, .header, .container{
+   display: none!important;
+ }
+.errormessage{
+  margin-top: 10vh;
+  display: block;
+}
+}
