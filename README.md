@@ -1,0 +1,1 @@
+I created this website back in 2022 as my first full web dev project when i was very inexperienced with webdev; now it is in public access for archiving purposes and to have documnetation of my skills progression
